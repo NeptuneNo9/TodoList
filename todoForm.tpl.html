@@ -1,0 +1,12 @@
+<form name="todoForm" ng-submit="add(newTodoTitle)">
+  <div class="input-group">
+    <input type="text" class="form-control" ng-model="newTodoTitle" placeholder="add new todo" minlength="3">
+    <span class="input-group-btn">
+      <button class="btn btn-success" type="submit">add</button>
+    </span>
+   </div>
+   <div ng-show="todoForm.$dirty && todoForm.$invalid">
+     <div class="alert alert-warning" role="alert">Please input at least three letters.</div>
+   </div>
+</form>
+<br>
